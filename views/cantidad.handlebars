@@ -1,0 +1,90 @@
+
+<div id="wrapper">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CNEE</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+
+                        <li>
+                            <a href="cantidad"><i class="fa fa-bar-chart-o fa-fw"></i> Cantidades</a>
+                        </li>
+                        <li>
+                            <a href="tiempo"><i class="fa fa-table fa-fw"></i> Tiempos</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Cantidades</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Cantidad de interrupciones
+                            <div class="pull-right">
+
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                          <div id="table-location">
+
+                          </div>
+                          <br/>
+                          <!-- Location where the chart will be added -->
+                          <div class="row">
+                          <div id="chart-location">
+
+                          </div>
+                        </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                  </div>
+
+       </div>
+</div>
+
+<script id="tabular-template" type="text/html">
+<h2>Cantidad de interrupciones</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Month</td>
+      \{{#each categories}} <td>\{{label}}</td> \{{/each }}
+    </tr>
+  </thead>
+  <tbody>
+    \{{#each dataset}}
+    <tr>
+      <td>\{{seriesname}}</td>
+      \{{#each data}} <td>\{{value}}</td> \{{/each}}
+    </tr>
+    \{{/each}}
+  </tbody>
+</table>
+</script>
